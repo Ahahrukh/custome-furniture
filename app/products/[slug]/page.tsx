@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, Tecton, ShieldCheck, Truck } from "lucide-react";
+import { Armchair, ArrowLeft, ShieldCheck, Truck } from "lucide-react";
 import { ProductActions } from "@/components/product-actions";
 import { getProductBySlug } from "@/lib/products";
 
@@ -50,7 +50,7 @@ export default async function ProductPage({
 
           <div className="spec-list">
             <div>
-              <Tecton size={19} />
+              <Armchair size={19} />
               <span>{product.materials.join(", ")}</span>
             </div>
             <div>
