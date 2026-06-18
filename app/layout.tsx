@@ -14,7 +14,7 @@ const playfair = Playfair_Display({
   display: "swap"
 });
 
-export const metadata: Metadata = {
+export const metadata: Metadata = { 
   title: "Tecton Woods Furniture",
   description: "Royal custom furniture storefront built with Next.js and Framer Motion."
 };
