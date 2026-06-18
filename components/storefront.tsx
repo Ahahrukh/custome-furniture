@@ -91,9 +91,9 @@ export function Storefront({ products }: { products: Product[] }) {
         <button className="icon-button mobile-only" onClick={() => setMenuOpen(true)} aria-label="Open menu">
           <Menu size={20} />
         </button>
-        <button className="brand" onClick={() => openTab("home")} aria-label="Crown Atelier home">
-          <span>Crown</span>
-          Atelier
+        <button className="brand" onClick={() => openTab("home")} aria-label="Tecton Woods home">
+          <span>Tecton</span>
+          Woods
         </button>
         <nav className="desktop-nav" aria-label="Primary tabs">
           {tabs.map((tab) => (
@@ -199,7 +199,7 @@ function HomeTab({ products, onTab }: { products: Product[]; onTab: (tab: TabKey
           <p className="eyebrow">Premium single-owner showroom</p>
           <h1>Royal furniture, quietly handcrafted.</h1>
           <p>
-            Crown Atelier creates elegant custom furniture for residences,
+            Tecton Woods creates elegant custom furniture for residences,
             private lounges, and showrooms that value timeless materials and
             personal service over mass production.
           </p>
@@ -234,7 +234,7 @@ function StoryTab() {
     <section className="tab-section page-intro">
       <div>
         <p className="eyebrow">Owner and brand story</p>
-        <h1>A private atelier shaped by craft, patience, and royal restraint.</h1>
+        <h1>A private Woods shaped by craft, patience, and royal restraint.</h1>
       </div>
       <div className="story-grid">
         <div className="story-image">
@@ -247,7 +247,7 @@ function StoryTab() {
         </div>
         <div className="story-copy">
           <p>
-            Crown Atelier is a single-owner furniture showroom built around
+            Tecton Woods is a single-owner furniture showroom built around
             bespoke service. Every consultation begins with the room, the
             lifestyle, and the materials that will age beautifully inside it.
           </p>
@@ -434,7 +434,7 @@ function ShowroomTab({ onTab }: { onTab: (tab: TabKey) => void }) {
   return (
     <section className="tab-section page-intro">
       <p className="eyebrow">Showroom location</p>
-      <h1>Visit the private Crown Atelier showroom.</h1>
+      <h1>Visit the private Tecton Woods showroom.</h1>
       <div className="showroom-grid">
         <div className="showroom-panel">
           <MapPin size={24} />
@@ -525,8 +525,8 @@ function Footer({ onTab }: { onTab: (tab: TabKey) => void }) {
       <div className="footer-main">
         <div className="footer-brand">
           <button className="brand" onClick={() => onTab("home")}>
-            <span>Crown</span>
-            Atelier
+            <span>Tecton</span>
+            Woods
           </button>
           <p>
             Bespoke white and brown furniture, handcrafted for homes, private
@@ -573,13 +573,13 @@ function Footer({ onTab }: { onTab: (tab: TabKey) => void }) {
 
       <div className="footer-bottom">
         <form className="footer-newsletter">
-          <label htmlFor="footer-email">Atelier notes</label>
+          <label htmlFor="footer-email">Woods notes</label>
           <div>
             <input id="footer-email" placeholder="Email address" />
             <button type="button">Subscribe</button>
           </div>
         </form>
-        <p>© 2026 Crown Atelier. Crafted for bespoke interiors.</p>
+        <p>© 2026 Tecton Woods. Crafted for bespoke interiors.</p>
       </div>
     </footer>
   );
