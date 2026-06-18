@@ -8,8 +8,12 @@ import {
   CalendarDays,
   ChevronLeft,
   ChevronRight,
+  Clock,
+  Instagram,
+  Mail,
   MapPin,
   Menu,
+  Phone,
   Search,
   Star,
   X
@@ -518,24 +522,64 @@ function ShowroomCard({ product, index }: { product: Product; index: number }) {
 function Footer({ onTab }: { onTab: (tab: TabKey) => void }) {
   return (
     <footer className="footer">
-      <div>
-        <button className="brand" onClick={() => onTab("home")}>
-          <span>Crown</span>
-          Atelier
-        </button>
-        <p>Royal, handcrafted custom furniture from a private single-owner showroom.</p>
+      <div className="footer-main">
+        <div className="footer-brand">
+          <button className="brand" onClick={() => onTab("home")}>
+            <span>Crown</span>
+            Atelier
+          </button>
+          <p>
+            Bespoke white and brown furniture, handcrafted for homes, private
+            lounges, and refined showroom interiors.
+          </p>
+          <div className="footer-socials" aria-label="Social links">
+            <a href="#" aria-label="Instagram">
+              <Instagram size={18} />
+            </a>
+            <a href="#" aria-label="Email">
+              <Mail size={18} />
+            </a>
+            <a href="#" aria-label="Phone">
+              <Phone size={18} />
+            </a>
+          </div>
+        </div>
+
+        <nav className="footer-links" aria-label="Footer navigation">
+          <h3>Explore</h3>
+          <button onClick={() => onTab("story")}>Brand Story</button>
+          <button onClick={() => onTab("collections")}>Collections</button>
+          <button onClick={() => onTab("craft")}>Craft Process</button>
+          <button onClick={() => onTab("gallery")}>Gallery</button>
+          <button onClick={() => onTab("contact")}>Book Consultation</button>
+        </nav>
+
+        <div className="footer-contact">
+          <h3>Showroom</h3>
+          <p>
+            <MapPin size={17} />
+            14 Royal Arcade, Lower Parel, Mumbai 400013
+          </p>
+          <p>
+            <Phone size={17} />
+            +91 90000 00000
+          </p>
+          <p>
+            <Clock size={17} />
+            Mon - Sat, 10:30 AM - 7:00 PM
+          </p>
+        </div>
       </div>
-      <div className="footer-links">
-        <button onClick={() => onTab("story")}>Brand Story</button>
-        <button onClick={() => onTab("collections")}>Collections</button>
-        <button onClick={() => onTab("showroom")}>Showroom</button>
-        <button onClick={() => onTab("contact")}>Contact</button>
-      </div>
-      <div className="footer-contact">
-        <h3>Visit</h3>
-        <p>14 Royal Arcade, Lower Parel, Mumbai</p>
-        <p>+91 90000 00000</p>
-        <p>Instagram / Pinterest / YouTube</p>
+
+      <div className="footer-bottom">
+        <form className="footer-newsletter">
+          <label htmlFor="footer-email">Atelier notes</label>
+          <div>
+            <input id="footer-email" placeholder="Email address" />
+            <button type="button">Subscribe</button>
+          </div>
+        </form>
+        <p>© 2026 Crown Atelier. Crafted for bespoke interiors.</p>
       </div>
     </footer>
   );
